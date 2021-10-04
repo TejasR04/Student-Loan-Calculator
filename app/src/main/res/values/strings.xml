@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">StudentLoans</string>
+    <string name="calculate">Calculate</string>
+    <string name="loan_fees">Loan Fees</string>
+    <string name="loan_term">Loan Term</string>
+    <string name="interest_rate">Interest Rate</string>
+    <string name="loan_amount">Loan Amount</string>
+</resources>
