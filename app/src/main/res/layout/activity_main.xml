@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_200"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/loan_calculator"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="normal"
+        tools:ignore="TextContrastCheck" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/loanAmount"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginRight="50dp"
+        android:textColorHint="#FFFFFF"
+        android:textStyle="italic"
+        app:boxStrokeColor="#FFFFFF"
+        app:hintTextColor="#FFFFFF"
+        tools:boxStrokeColor="#FFFFFF">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/amount"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textStyle="italic"
+            tools:ignore="TextContrastCheck"
+            tools:textColor="#FFFFFF"
+            tools:textColorHint="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/loanTerm"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loanAmount"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="50dp"
+        android:textColorHint="#FFFFFF"
+        android:textStyle="italic"
+        app:boxStrokeColor="#FFFFFF"
+        app:hintTextColor="#FFFFFF"
+        tools:boxStrokeColor="#FFFFFF">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/term"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textStyle="italic"
+            tools:ignore="TextContrastCheck"
+            tools:textColor="#FFFFFF"
+            tools:textColorHint="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/yearlyInterestRate"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loanTerm"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="50dp"
+        android:textColorHint="#FFFFFF"
+        android:textStyle="italic"
+        app:boxStrokeColor="#FFFFFF"
+        app:hintTextColor="#FFFFFF"
+        tools:boxStrokeColor="#FFFFFF">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/interest_rate"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textStyle="italic"
+            tools:ignore="TextContrastCheck"
+            tools:textColor="#FFFFFF"
+            tools:textColorHint="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/loanFee"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/yearlyInterestRate"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="50dp"
+        android:textColorHint="#FFFFFF"
+        android:textStyle="italic"
+        app:boxStrokeColor="#FFFFFF"
+        app:hintTextColor="#FFFFFF"
+        tools:boxStrokeColor="#FFFFFF">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/fees"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textStyle="italic"
+            tools:ignore="TextContrastCheck"
+            tools:textColor="#FFFFFF"
+            tools:textColorHint="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonBorder"
+        android:layout_width="122dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/calculateButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-49dp"
+        android:backgroundTint="#FFFFFF"
+        android:shadowColor="#FFFFFF"
+        android:text="@string/calculate"
+        android:textColor="#1DE9B6"
+        tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loanFee"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/calculate"
+        android:textColor="#1DE9B6"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/totalPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonBorder"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="#FFFCFC"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/totalInterestAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/totalPayment"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/monthlyPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/totalInterestAmount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>
